@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="#" th:action="@{/xn/info}" th:object="${info}" method="post">
+        <table>
+            <tbody><tr>
+                <td style="text-align:right;"><label>登录名:</label></td>
+                <td style="text-align:left;"><input type="text" th:field="*{username}"></td>
+            </tr>
+            <tr>
+                <td style="text-align:right;"><label>密码:</label></td>
+                <td style="text-align:left;"><input type="password" th:field="*{password}" ></td>
+            </tr>
+            <tr>
+                <td style="text-align:right;"><label>开始日期:</label></td>
+                <td style="text-align:left;"><input type="date" th:field="*{startDate}" ></td>
+            </tr>
+            <tr>
+                <td style="text-align:right;"><label>结束日期:</label></td>
+                <td style="text-align:left;"><input type="date" th:field="*{endDate}" ></td>
+            </tr>
+
+            <tr>
+                <td style="text-align:left;">
+                    <input type="reset"  value="重置">
+                </td>
+                <td style="text-align:right;">
+                    <input type="submit"  value="登录 »">
+                </td>
+            </tr>
+            </tbody></table>
+    </form>
+</body>
+
+<style>
+    body {
+        font-family: Verdana, sans-serif;
+        font-size: 12px;
+        color: #333;
+    }
+    table {
+        margin-top: 5em;
+        padding: 1em;
+        margin-left: auto;
+        margin-right: auto;
+        border: 2px solid #FDBF3B;
+        background-color: #FFEBC1;
+    }
+    table label {
+        font-weight: bold;
+    }
+    table td {
+        padding: 6px;
+    }
+</style>
+</html>
